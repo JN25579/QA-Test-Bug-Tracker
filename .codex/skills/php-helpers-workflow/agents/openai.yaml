@@ -1,0 +1,4 @@
+interface:
+  display_name: "PHP Helpers Workflow"
+  short_description: "Add or reuse simple helper functions"
+  default_prompt: "Use $php-helpers-workflow to move repeated beginner-level PHP logic into `php-basics/helpers.php`."

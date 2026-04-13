@@ -1,13 +1,12 @@
 <?php
 
-function sanitiseString(string $value): string
+function sanitiseString($value): string
 {
-    if ($value === (array) $value) {
-        implode('', $value);
-        return $value;
-    } else {
-        return htmlspecialchars(trim($value), ENT_QUOTES, 'UTF-8');
+    if (is_array($value)) {
+        $value = implode('', $value);
     }
+
+    return htmlspecialchars(trim((string) $value), ENT_QUOTES, 'UTF-8');
 }
 
 function calculateAverage(array $numbers): float

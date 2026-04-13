@@ -1,0 +1,4 @@
+interface:
+  display_name: "PHP Basics Page Edit"
+  short_description: "Change simple pages in this PHP repo"
+  default_prompt: "Use $php-basics-page-edit to update one of the `php-basics` pages without breaking the current beginner-friendly structure."

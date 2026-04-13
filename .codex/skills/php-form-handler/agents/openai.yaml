@@ -1,0 +1,4 @@
+interface:
+  display_name: "PHP Form Handler"
+  short_description: "Edit forms and POST or GET handling"
+  default_prompt: "Use $php-form-handler to add or update a beginner-friendly form flow in the `php-basics` folder."

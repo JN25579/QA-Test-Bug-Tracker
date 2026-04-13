@@ -1,18 +1,15 @@
 <?php
 require 'helpers.php';
 
-$greeting = 'hey there';
-
+$name = 'Guest';
 $greet = fn($name) => 'Hello ' . $name;
 
 if (isset($_GET['name'])) {
     $name = sanitiseString($_GET['name']);
-} else {
-    'Hello ' . $name;
 }
 
-if ($age = $_GET['age'] ?? null) {
-    $age = (int) $age;
+if (isset($_GET['age']) && $_GET['age'] !== '') {
+    $age = (int) $_GET['age'];
     if (isAdult($age)) {
         $name .= ' (Adult)';
     } else {
@@ -21,9 +18,6 @@ if ($age = $_GET['age'] ?? null) {
 } else {
     $name .= ' (Age not provided)';
 };
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">

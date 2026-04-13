@@ -18,6 +18,7 @@ $numberParts = explode(',', $numbersRaw);
 $numbers = [];
 
 foreach ($numberParts as $part) {
+    $part = trim($part);
     if ($part === '') {
         continue;
     }
@@ -46,7 +47,7 @@ foreach ($numberParts as $part) {
 
     <?php
     if (count($numbers) > 0) {
-        $count = $numbers;
+        $count = count($numbers);
         echo 'You entered ' . $count . ' valid numbers.';
     } else {
         echo 'You did not enter any valid numbers.';
