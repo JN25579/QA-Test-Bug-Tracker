@@ -128,6 +128,45 @@ function getIssueFormData(array $source): array
     return $data;
 }
 
+function getRandomIssueFormData(): array
+{
+    $titles = [
+        'Login button does not keep session',
+        'Board count is wrong after refresh',
+        'Error message overlaps the form',
+        'Done column still shows active task',
+        'New issue page loads too slowly',
+    ];
+
+    $descriptions = [
+        'Open the page, submit the form, and refresh the board. The saved result does not match the expected issue state.',
+        'Create a new issue and move it across the board. The summary numbers do not update the way a tester would expect.',
+        'Use a smaller screen and trigger a validation error. The layout becomes cramped and the page is harder to read.',
+        'Move an issue to done, then reopen it. The board flow is inconsistent and needs another check.',
+        'Load the tracker with a few issues already saved. The page feels slower than it should for a small app.',
+    ];
+
+    $people = [
+        'Jordan',
+        'Alex',
+        'Taylor',
+        'Morgan',
+        'Casey',
+    ];
+
+    $severityKeys = array_keys(getSeverityOptions());
+    $statusKeys = array_keys(getStatusOptions());
+
+    return [
+        'title' => $titles[array_rand($titles)],
+        'description' => $descriptions[array_rand($descriptions)],
+        'reporter' => $people[array_rand($people)],
+        'assignee' => $people[array_rand($people)],
+        'severity' => $severityKeys[array_rand($severityKeys)],
+        'status' => $statusKeys[array_rand($statusKeys)],
+    ];
+}
+
 function validateIssueForm(array $data): array
 {
     $errors = [];
