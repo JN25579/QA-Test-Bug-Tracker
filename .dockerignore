@@ -1,0 +1,5 @@
+.git
+.idea
+.codex
+php.ini
+php-basics/data/*.sqlite

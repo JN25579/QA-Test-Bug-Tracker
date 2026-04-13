@@ -1,5 +1,4 @@
-<nav>
-    <a href="index.php">Home</a> |
-    <a href="form.php">Form</a>
+<nav class="page-nav">
+    <a href="index.php">Board</a>
+    <a href="form.php">Create issue</a>
 </nav>
-<hr>
