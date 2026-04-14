@@ -8,3 +8,11 @@ services:
     volumes:
       - ./php-basics:/var/www/html
     restart: unless-stopped
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./php-basics/data:/var/www/html/data
+      - ./adminer/plugins-enabled:/var/www/html/plugins-enabled
+    restart: unless-stopped
